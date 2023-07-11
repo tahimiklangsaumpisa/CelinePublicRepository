@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Blue Eagle Bookings Sign-In Page</title>
+    <link rel="stylesheet" href="login-page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://kit.fontawesome.com/65e6410554.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+<div class="background">
+    <h1>Welcome back, Atenista!</h1>
+    <div class="formbox">
+        <form>
+            <div class="input-field">
+                <i class="fa-solid fa-envelope" style="color: #253e90;"></i>
+                <input type="email" placeholder="Email">
+            </div>
+            <div class="input-field">
+                <i class="fa-solid fa-id-card" style="color: #253e90;"></i>
+                <input type="text" placeholder="ID Number" id="IDnum">
+                <span class="eye" onclick="myFunction()">
+                    <i id="hide1" class="fa-solid fa-eye" style="color: #253e90;"></i>
+                    <i id="hide2" class="fa-solid fa-eye-slash" style="color: #253e90;"></i>
+                 </span>
+            </div>
+        </form>
+        <script>
+            function myFunction(){
+                var x = document.getElementById("IDnum");
+                var y = document.getElementById("hide1");
+                var z = document.getElementById("hide2");
+
+                if(x.type === 'password'){
+                    x.type = "text";
+                    y.style.display = "block";
+                    z.style.display = "none";
+                }
+                else{
+                    x.type = "password";
+                    y.style.display = "none";
+                    z.style.display = "block";
+                }
+            }
+        </script>
+        <button type="button" class="btn">LOGIN</button>
+    </div>
+</div>
+
+
+</body>
+</html>
